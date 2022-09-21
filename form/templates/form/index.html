@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Application  Form</title>
+    </head>
+    <body>
+        <h1>Application Form</h1>
+        <form action="{%url 'form:index' %}" method="post">
+            {%csrf_token%}
+            {{appform}}
+            <input type="submit">
+        </form>
+    </body>
+</html>

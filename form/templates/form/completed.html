@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Completed Application Form</title>
+    </head>
+    <body>
+        <h1>Completed Application Form</h1>
+        {%for datum in data%}
+            <p>{{datum}}</p>
+        {% endfor %}
+        <p>{{data}}[0]</p>
+        <form>
+            <input type="submit"><!--button that turns this into a pdf-->
+        </form>
+    </body>
+</html>
