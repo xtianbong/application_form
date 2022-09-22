@@ -1,14 +1,24 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="eng">
     <head>
+        
         <title>Application  Form</title>
+        <link href="{%static 'form/styles.css'%}" rel="stylesheet">
     </head>
     <body>
-        <h1>Application Form</h1>
-        <form action="{%url 'form:index' %}" method="post">
-            {%csrf_token%}
-            {{appform}}
-            <input type="submit">
-        </form>
+        <div id="content">
+            <img src="{%static 'form/banner.png'%}" alt="Sterling Grace Technologies Banner" id="banner">
+            
+            <form action="{%url 'form:index' %}" method="post">
+                <h1>Application Form</h1>
+                {%csrf_token%}
+                <table>
+                    {{appform.as_table}}
+                    <tr><th></th><td><input type="submit" value="Submit" id="submit_button"></td>
+                </table>
+                
+            </form>
+        </div>
     </body>
 </html>

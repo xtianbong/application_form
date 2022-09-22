@@ -1,14 +1,31 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="eng">
     <head>
         <title>Completed Application Form</title>
+        <link href="{%static 'form/styles.css'%}" rel="stylesheet">
     </head>
     <body>
         <h1>Completed Application Form</h1>
+        <!--
         {%for datum in data%}
             <p>{{datum}}</p>
         {% endfor %}
-        <p>{{data}}[0]</p>
+        -->
+        <div id="name">
+            <p>Name:<ul><li>{{data.2}}</li><li>Last</li></ul><ul><li>{{data.1}}</li><li>Middle</li></ul>
+                  {{data.1}}  {{data.0}} Date:{{data.3}}</li><li class="sub">        Last        Middle      First</li></ul></p>
+            <p class="sub">        Last        Middle      First</p>
+        </div>
+        <div id="address">
+            <p>Address: {{data.4}}  Address(second line):{{data.5}}   City:{{data.6}}  Province:{{data.7}}  Postal code:{{data.8}}</p>
+        </div>
+        <div id="contact">
+            <p>Telephone: {{data.9}} Other Phone: {{data.10}} E-mail:{{data.11}}</p>
+        </div>
+        <div id="reffered">
+            <p>Reffered by: {{data.12}}</p>
+        </div>
         <form>
             <input type="submit"><!--button that turns this into a pdf-->
         </form>
